@@ -1,0 +1,134 @@
+:root {
+  --main-color: #53c76c;
+  --main-color_dark: #3c924f;
+  --sub-color: #3384ee;
+  --sub-color_dark: #2867b9;
+  --grey: #f6f6f6;
+  --red: #ff6565;
+  --red_dark: #e24040;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  color: #000000;
+}
+body {
+  padding-bottom: 50px;
+}
+ul {
+  list-style: none;
+}
+.container {
+  max-width: 1240px;
+  padding: 0 20px;
+  margin: auto;
+}
+
+.input {
+  display: block;
+  input {
+    border: 0;
+    border-radius: 20px;
+    background-color: var(--grey);
+    padding: 21px 23px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    &::placeholder {
+      color: #5a5a5a;
+    }
+  }
+  & > span {
+    font-weight: bold;
+    font-size: 14px;
+  }
+}
+
+.inputs-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  .input {
+    width: 48%;
+  }
+}
+.btn {
+  padding: 11px 15px;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: var(--sub-color);
+  border: 0;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  transition: all ease 0.2s;
+
+  &:hover {
+    background-color: var(--sub-color_dark);
+  }
+
+  &_green {
+    background-color: var(--main-color);
+    &:hover {
+      background-color: var(--main-color_dark);
+    }
+  }
+
+  &_red {
+    background-color: var(--red);
+    &:hover {
+      background-color: var(--red_dark);
+    }
+  }
+
+  img {
+    margin-right: 20px;
+  }
+
+  &_s {
+    width: 43px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 0;
+
+    img {
+      max-width: 70%;
+      max-height: 70%;
+      margin: 0;
+    }
+  }
+}
+.btns-row {
+  display: flex;
+  justify-content: flex-end;
+  .btn:not(:last-child) {
+    margin-right: 25px;
+  }
+}
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.4s;
+}
+.page-enter {
+  opacity: 0;
+  transform: translateX(30%);
+}
+.page-leave-to {
+  opacity: 0;
+  transform: translateX(-30%);
+}
