@@ -1,16 +1,19 @@
 # contacts-book
 
-## Project setup
+Результат моего первого знакомства с фреймворком Vue.JS
+В проекте помимо самого Vue использованы Vuex и VueRouter
+
+## Установка проекта
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Запуск режима разработки
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Сборка минифицированной версии
 ```
 npm run build
 ```
