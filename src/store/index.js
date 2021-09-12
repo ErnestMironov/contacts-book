@@ -39,6 +39,6 @@ export default createStore({
   },
   getters: {
     contacts: s => s.contacts,
-    getContactById: s => id => s.contacts.find(t => t.id === id)
+    getContactById: s => id => JSON.parse(JSON.stringify(s.contacts.find(t => t.id === id)))
   }
 })
